@@ -26,6 +26,29 @@ windows/
 - A **BrightSDK API key** set as `SDK_API_KEY` — see [obtain-api-key.md](https://brightsdk.github.io/bright-sdk-downloader-rs/obtain-api-key.html)
 - An internet connection — the SDK zip is downloaded from the CDN on first run
 
+## API key
+
+The integration tool requires a **BrightSDK API key** set as the `SDK_API_KEY` environment variable.
+
+**PowerShell:**
+```powershell
+$env:SDK_API_KEY = "<your-api-key>"
+```
+
+**CMD:**
+```cmd
+set SDK_API_KEY=<your-api-key>
+```
+
+**How to get a key:**
+
+1. Log in at [bright-sdk.com](https://bright-sdk.com)
+2. Go to **Settings → Company profile → API keys**
+3. Copy an existing key or generate a new one
+
+> Full step-by-step guide with screenshots:\
+> <https://brightsdk.github.io/bright-sdk-downloader-rs/obtain-api-key.html>
+
 ## Quick start — example app
 
 ### 1. Install SDK and patch the project
@@ -73,8 +96,7 @@ Copy `brd_sdk.config.json` next to your own `.csproj`, then edit it:
 {
     "workdir": ".",
     "libs_dir": "BrightSDK",
-    "sdk_ver": "latest",
-    "sdk_url": "https://cdn.bright-sdk.com/static/bright_sdk_win-SDK_VER.zip"
+    "sdk_ver": "latest"
 }
 ```
 
